@@ -271,6 +271,18 @@ Generic event happening in the legistics network
 }
 ```
 
+Change to the building's state
+
+```json
+{
+  "signal": "building.updated",
+  "data": {
+    "building_id": string,
+    ...
+  }
+}
+```
+
 ### Error
 
 Generic error returned by the SPINE when anything goes wrong
