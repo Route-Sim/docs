@@ -1,0 +1,15 @@
+# VPP related files
+*.vpp.lck
+*.vpp.bak*
+
+# OS related files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
