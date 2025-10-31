@@ -63,13 +63,3 @@ Conventions:
 
 - Keep exported images in their existing directories (e.g., `Class Diagrams/`, `Use-Case Diagrams/`).
 - Use descriptive filenames and avoid spaces in new names when possible.
-
-### Contributing
-
-- Keep the WebSocket protocol changes synchronized between implementation and [`2-api-protocol.md`](./2-api-protocol.md).
-- When updating diagrams, commit both the updated `ROUTE.vpp` and regenerated PNG exports.
-- Prefer small, focused commits with clear messages.
-
-### License
-
-No license information has been provided yet. If you intend to publish or share this work, please add a license file or note here.
