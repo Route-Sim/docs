@@ -72,6 +72,22 @@ Signals are sent by the SPINE.
 }
 ```
 
+### Pausing Simulation
+
+```json
+# On the action sent by a client:
+{
+  "action": "simulation.pause",
+  "data": {}
+}
+
+# Server responses with:
+{
+  "signal": "simulation.paused",
+  "data": {}
+}
+```
+
 ### Resuming Simulation
 
 ```json
