@@ -254,7 +254,7 @@ Signals are sent by the SPINE.
 ```json
 # On the action sent by a client:
 {
-  "action": "agent.get",
+  "action": "agent.describe",
   "params": {
     "agent_id": string
   }
@@ -262,11 +262,42 @@ Signals are sent by the SPINE.
 
 # Server responses with:
 {
-  "signal": "agent.state",
+  "signal": "agent.described",
   "data": {
     "agent_id": string,
     "agent_kind": string,
     ...
+  }
+}
+```
+
+### List all agents
+
+```json
+# On the action sent by a client:
+{
+  "action": "agent.list",
+  "params": {
+    "agent_kind": string
+  }
+}
+
+# Server responses with:
+{
+  "signal": "agent.listed",
+  "data": {
+    "total": integer,
+    "agents": [
+      {
+        "agent_id": string,
+        ...
+      },
+      {
+        "agent_id": string,
+        ...
+      },
+      ...
+    ],
   }
 }
 ```
@@ -287,13 +318,25 @@ Generic event happening in the legistics network
 }
 ```
 
-Change to the building's state
+### Change to the building's state
 
 ```json
 {
   "signal": "building.updated",
   "data": {
     "building_id": string,
+    ...
+  }
+}
+```
+
+### Change to the agent's state
+
+```json
+{
+  "signal": "agent.updated",
+  "data": {
+    "agent_id": string,
     ...
   }
 }
