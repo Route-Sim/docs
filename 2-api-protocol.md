@@ -104,6 +104,28 @@ Signals are sent by the SPINE.
 }
 ```
 
+### Update Simulation
+
+```json
+# On the action sent by a client:
+{
+  "action": "simulation.update",
+  "params": {
+    "tick_rate": integer,
+    "speed": float
+  }
+}
+
+# Server responses with:
+{
+  "signal": "simulation.updated",
+  "data": {
+    "tick_rate": integer,
+    "speed": float
+  }
+}
+```
+
 ### Create Map
 
 ```json
@@ -160,26 +182,6 @@ Signals are sent by the SPINE.
 {
   "signal": "map.imported",
   "data": {}
-}
-```
-
-### Updating Tick Rate
-
-```json
-# On the action sent by a client:
-{
-  "action": "tick_rate.update",
-  "params": {
-    "tick_rate": integer,
-  }
-}
-
-# Server responses with:
-{
-  "signal": "tick_rate.updated",
-  "data": {
-    "tick_rate": integer,
-  }
 }
 ```
 
